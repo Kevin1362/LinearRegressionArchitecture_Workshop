@@ -1,0 +1,24 @@
+# Core
+pandas==2.1.4
+numpy==1.26.2
+matplotlib==3.8.2
+
+# ML
+scikit-learn==1.3.2
+
+# Config
+PyYAML==6.0.1
+
+# DB + API
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+requests==2.31.0
+
+# Notebooks (optional, for local dev)
+jupyter==1.0.0
+notebook==7.0.6
+ipython==8.18.1
+
+# Optional visuals / dashboard (from the streaming workshop)
+plotly==5.18.0
+streamlit==1.30.0

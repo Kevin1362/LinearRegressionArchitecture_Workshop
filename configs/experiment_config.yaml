@@ -1,0 +1,34 @@
+# Experiment configuration for Linear Regression Architecture Workshop
+data:
+  # source: csv | api | db
+  source: csv
+
+  # CSV source (default)
+  csv_path: "data/raw/RMBR4-2_export_test.csv"
+
+  # API source (example)
+  api_endpoint: "https://example.com/robot-data"
+
+  # DB source (example for Neon Postgres)
+  # Tip: keep secrets in a .env file locally; do NOT commit real passwords.
+  db_conn_str: "postgresql+psycopg2://USER:PASSWORD@HOST:5432/DATABASE?sslmode=require"
+  db_table: "robot_current"
+  db_limit: 5000
+
+  # Univariate regression columns
+  feature_col: "Axis #1"
+  target_col: "days_until_failure"
+
+  # Requirement helper: generate at least 3 robot sources
+  make_multi_robot: true
+  robot_ids: ["R1", "R2", "R3"]
+
+training:
+  learning_rate: 0.01
+  iterations: 2000
+  test_size: 0.2
+  standardize: true
+
+experiment:
+  seed: 42
+  results_csv: "experiments/results.csv"
